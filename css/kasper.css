@@ -357,3 +357,18 @@ header .container nav ul a:hover::before{
     }
 }
 /* End Services */
+
+/* Start Design */
+.design {
+    background-image: url(../images/design-features.jpg);
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+.design .image {
+}
+/* End Design */
