@@ -12,6 +12,7 @@
     --main-color: #19c8fa;
     --secound-color: #777777;
     --over-color: rgb(0 0 0 / 60%);
+    --bacground-color: rgb(15 116 143 / 70%);
     --line-height: 2;
 }
 
@@ -234,7 +235,7 @@ header .container nav ul a:hover::before{
 .landing .text {
     padding: 50px;
     color: white;
-    background-color: rgb(15 116 143 / 70%);
+    background-color: var(--bacground-color);
     position:absolute;
     left:0;
     top: 50%;
@@ -369,6 +370,829 @@ header .container nav ul a:hover::before{
     overflow: hidden;
 }
 
+.design::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    background-color: var(--over-color);
+}
+
 .design .image {
+    flex:1;
+    text-align: center;
+    z-index: 2;
+}
+
+.design .image img {
+    position:relative;
+    bottom: -150px;
+}
+
+.design .text {
+    flex: 1;
+    padding: 50px;
+    background-color: var(--bacground-color);
+    color: white;
+    z-index: 2;
+}
+
+.design .text h2 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.design .text ul li{
+    padding: 15px 0;
+    text-transform: capitalize;
+}
+
+.design .text ul li::before {
+    content: "\e163";
+    font-family: "font awesome 6 free";
+    font-weight: 900;
+    padding-right: 20px;
+}
+
+@media (max-width: 767px) {
+    .design .image {
+        display: none;
+    }
 }
 /* End Design */
+/* Start portfolio */
+.portfolio {
+    padding: 100px 0 0;
+}
+
+.portfolio .tools-bar ul {
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio .tools-bar ul li {
+    padding: 10px;
+}
+
+.portfolio .tools-bar ul li:first-of-type{
+    background-color: var(--main-color);
+    color: white;
+}
+
+.portfolio .images-portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+@media (min-width: 767px) {
+    .portfolio .images-portfolio .images {
+        flex-basis: 100%;
+    }
+}
+
+.portfolio .images-portfolio .images {
+    flex-basis: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (max-width: 767px) {
+    .portfolio .images-portfolio .images {
+        flex-basis: 100%;
+    }
+}
+
+.portfolio .images-portfolio .images img {
+    max-width: 100%;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.portfolio .images-portfolio .images:hover img {
+    transform: rotate(3deg) scale(1.1);
+    -webkit-transform: rotate(3deg) scale(1.1);
+    -moz-transform: rotate(3deg) scale(1.1);
+    -ms-transform: rotate(3deg) scale(1.1);
+    -o-transform: rotate(3deg) scale(1.1);
+}
+
+.portfolio .images-portfolio .images .text-portfolio {
+    padding: 20px;
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    bottom: -100px;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+.portfolio .images-portfolio .images:hover .text-portfolio {
+    bottom: 0;
+}
+
+.portfolio .images-portfolio .images .text-portfolio h4 {
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.portfolio .images-portfolio .images .text-portfolio p {
+    color: var(--main-color);
+}
+
+.portfolio .more {
+    background-color: var(--main-color);
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+/* End portfolio */
+/* Start Video */
+.video {
+    margin: 100px 0 0;
+    position: relative;
+}
+
+.video::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--over-color);
+    position: absolute;
+    top: 0;
+}
+
+.video video{
+    width: 100%;
+}
+
+.video .text-video {
+    background-color: var(--bacground-color);
+    width: 100%;
+    max-height: 100%;
+    text-align: center;
+    color: white;
+    padding: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+@media (max-width: 767px) {
+    .video .text-video {
+        padding: 25px;
+    }
+}
+
+.video .text-video h2 {
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.video .text-video p {
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+
+.video .text-video input {
+    padding: 10px 20px;
+    background-color: black;
+    text-transform: uppercase;
+    color: white;
+    border: none;
+}
+/* End Video */
+/* Start About */
+.about {
+    margin-top: 100px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.about .image-about {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    top: -160px;
+}
+
+.about .image-about img {
+    max-width: 100%;
+    position: relative;
+    top: 120px;
+}
+
+@media (max-width: 767px) {
+    .about .image-about img {
+        top: 60px;
+        margin-top: 50px;
+    }
+}
+/* End About */
+/* Start Status */
+.status {
+    background-image: url(../images/stats.png);
+    background-size: cover;
+    position:relative;
+    top: -160px;
+    padding: 100px 0;
+    text-align: center;
+    z-index: 1;
+}
+
+.status::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--over-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.status .container {
+    background-color: var(--bacground-color);
+    color: white;
+    
+}
+
+.status .container .text-stetus {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.status .box {
+    padding: 50px;
+}
+
+@media (max-width: 1100px) {
+    .status .box {
+        flex-basis: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    .status .box {
+        flex-basis: 100%;
+    }
+}
+
+.status .box i {
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    margin: 0 auto 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.status .box .number {
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: bold;
+}
+/* End Status */
+/* Start Skills */
+.our-skills {
+    text-align: center;
+}
+
+.our-skills .container {
+    display: flex;
+}
+
+.our-skills .container h3 {
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.our-skills .container h3 + p {
+    color: var(--secound-color);
+    line-height: var(--line-height);
+    margin-bottom: 60px;
+}
+
+.our-skills .container .testimonials,
+.our-skills .container .skills {
+    flex-basis: 50%;
+    padding: 10px;
+}
+
+.our-skills .container .testimonials {
+    margin-right: 50px;
+}
+
+@media (max-width: 1100px) {
+    .our-skills .container {
+        flex-wrap: wrap;
+    }
+
+    .our-skills .container .testimonials,
+    .our-skills .container .skills {
+        flex-basis: 100%;
+        margin-right: 0;
+    }
+
+    .our-skills .container .testimonials {
+        margin-bottom: 50px;
+    }
+
+}
+
+.our-skills .container .testimonials .content {
+    margin-bottom: 30px;
+    display: flex;
+    text-align: center;
+}
+
+.our-skills .container .testimonials .content img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 50px;
+    margin-top: 20px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.our-skills .container .testimonials .text {
+    line-height: var(--line-height);
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid var(--secound-color);
+}
+
+.our-skills .container .testimonials .text p {
+    color: var(--secound-color);
+    font-size: 14px;
+    text-align: right;
+}
+
+.our-skills .container .testimonials ul {
+    display: flex;
+    justify-content: center;
+}
+
+.our-skills .container .testimonials ul li {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.our-skills .container .testimonials ul li {
+    border: 1px solid var(--secound-color);
+    margin-right: 10px;
+}
+
+.our-skills .container .testimonials ul .active {
+    background-color: var(--main-color);
+}
+
+@media (max-width: 767px) {
+    .our-skills .container .testimonials .content {
+        flex-wrap: wrap;
+    }
+
+    .our-skills .container .testimonials .content img {
+        margin: 0 auto 25px;
+    }
+
+    .our-skills .container .testimonials .text {
+        text-align: center;
+        padding: 0 0 30px;
+    }
+}
+
+.our-skills .container .skills .prog {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.our-skills .container .skills .prog h4 {
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: normal;
+    padding-bottom: 20px;
+}
+
+.our-skills .container .skills .prog .prog-bar {
+    width: 100%;
+    height: 30px;
+    background-color: #dedadc;
+    position: relative;
+}
+
+.our-skills .container .skills .prog .prog-bar span {
+    display: block;
+    height: 100%;
+    background-color: #19c8fa;
+    position: relative;
+}
+
+.our-skills .container .skills .prog .prog-bar span::before {
+    content: "";
+    border: 10px solid;
+    border-color: black transparent transparent transparent;
+    position: absolute;
+    top: -15px;
+    right: -10px;
+}
+
+.our-skills .container .skills .prog .prog-bar span::after {
+    content: attr(data-progress);
+    background-color: black;
+    color: white;
+    border-radius: 15%;
+    padding: 5px;
+    position: absolute;
+    top: -40px;
+    right: -20px;
+    -webkit-border-radius: 15%;
+    -moz-border-radius: 15%;
+    -ms-border-radius: 15%;
+    -o-border-radius: 15%;
+}
+
+.our-skills .container .skills .adobe .prog-bar span,
+.our-skills .container .skills .php .prog-bar span {
+    width: 90%;
+}
+
+.our-skills .container .skills .html-css .prog-bar span {
+    width: 85%;
+}
+
+.our-skills .container .skills .javascript .prog-bar span {
+    width: 80%;
+}
+/* End Skills */
+/* Start Quote */
+.quote {
+    margin-top: 100px;
+    text-align: center;
+    background-image: url(../images/quote.jpg);
+    background-size: cover;
+    color: white;
+    padding: 100px 0;
+    position: relative;
+}
+
+.quote:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 75%);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.quote .container {
+    position: relative;
+}
+
+.quote .container q {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.quote .container q::before {
+    content: "\f100";
+    font-family: "font awesome 6 free";
+    font-weight: 900;
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.quote .container q::after {
+    content: "\f101";
+    font-family: "font awesome 6 free";
+    font-weight: 900;
+    font-size: 25px;
+    margin-left: 10px;
+}
+/* End Quote */
+/* Start Price */
+.price {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.price .container .plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.price .container .plans .plane .head {
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+    padding: 40px 20px;
+}
+
+.price .container .plans .plane .head h3 {
+    font-weight: normal;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.price .container .plans .plane .head p {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.price .container .plans .plane .head p sup {
+    padding-right: 15px;
+    font-weight: 400;
+    font-size: 25px;
+    position: relative;
+    top: -40px;
+}
+
+.price .container .plans .plane .head p sub {
+    padding-left: 15px;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.price .container .plans .plane li {
+    margin: auto;
+    padding: 20px 0;
+    width: 50%;
+    text-transform: capitalize;
+    border-bottom: 1px solid var(--main-color);
+}
+
+.price .container .plans .plane li:last-of-type {
+    border: none;
+}
+
+.price .container .plans .plane .foot {
+    padding: 50px 0;
+    border-top: 1px solid var(--main-color);
+}
+
+.price .container .plans .plane .foot a {
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 20px;
+
+    width: fit-content;
+    border: 1px solid var(--main-color);
+}
+
+.price .container .contant-text {
+    font-size: 20px;
+    margin: 50px 0 20px;
+}
+
+.price .container .contant-link {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
+    background-color: var(--main-color);
+    padding: 15px 30px;
+    margin: 10px 0;
+    display: inline-block;
+}
+/* End Price */
+/* Start Subscribe */
+.subscribe {
+    background-image: url(../images/subscribe.jpg);
+    background-size: cover;
+    margin-top: 100px;
+    padding: 100px 0;
+    color: white;
+    position: relative;
+}
+
+.subscribe::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--over-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.subscribe .container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    justify-content: left;
+    gap: 30px;
+}
+
+@media (max-width: 767px) {
+    .subscribe .container {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+}
+
+.subscribe .container form {
+    display: grid;
+    grid-template-columns: calc(100% - 130px) 130px;
+    position: relative;
+}
+
+.subscribe .container form i {
+    position: absolute;
+    font-size: 25px;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.subscribe .container form input[type="email"] {
+    padding: 20px 20px 20px 60px;
+    background: none;
+    border: 1px solid white;
+    outline: none;
+    color: white;
+    caret-color: white;
+}
+
+.subscribe .container form input[type="submit"] {
+    padding: 20px 10px;
+    background-color: var(--main-color);
+    border: 1px solid white;
+    color: white;
+    text-transform: uppercase;
+}
+
+.subscribe .container p {
+    line-height: 2;
+}
+/* End Subscribe */
+/* Start Contact */
+.contact {
+    margin: 100px 0;
+}
+
+.contact .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact .content form {
+    flex-basis: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+@media (max-width: 767px) {
+    .contact .content {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .contact .content form {
+        margin: 31px 0 0;
+        padding: 0;
+    }
+}
+
+.contact .content form input[name="userName"],
+.contact .content form input[name="e-mail"],
+.contact .content form textarea {
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.contact .content form input[type="submit"] {
+    width: 150px;
+    padding: 20px;
+    text-transform: uppercase;
+    border: none;
+    color: white;
+    background-color: var(--main-color);
+}
+
+.contact .content .info {
+    flex-basis: 25%;
+}
+
+.contact .content .info h3{
+    font-weight: normal;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.contact .content .info h3:last-of-type {
+    margin-top: 80px;
+}
+
+.contact .content .info p {
+    color: #777777;
+    line-height: 1.8;
+    text-transform: capitalize;
+}
+
+.contact .content .info p:last-of-type {
+    line-height: 2;
+    font-style: italic;
+}
+
+.contact .content .info p span {
+    text-transform: uppercase;
+}
+/* End Contact */
+/* Start Footer */
+footer {
+    background-image: url(../images/subscribe.jpg);
+    background-size: cover;
+    padding: 50px 0;
+    text-align: center;
+    position: relative;
+}
+
+footer::before {
+    content: "";
+    background-color: rgb(0 0 0 / 70%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+footer .container {
+    position: relative;
+    color: white;
+}
+
+footer .container img {
+    margin: 0 auto 20px;
+}
+
+footer .container p:first-of-type {
+    font-weight: normal;
+    font-size: 22px;
+    text-transform: uppercase;
+    width:fit-content;
+    margin: 20px auto;
+    padding: 20px;
+    border-bottom: 1px solid white;
+}
+
+footer .container .icon {
+    padding: 20px;
+
+}
+
+footer .container .icon i:not(i:last-of-type) {
+    margin-right: 30px;
+}
+
+footer .container p:last-of-type {
+    margin-top: 50px;
+    text-transform: capitalize;
+}
+
+footer .container p:last-of-type span {
+    color: var(--main-color);
+}
+/* End Footer */
