@@ -174,7 +174,6 @@ header .container nav .fa-bars {
     font-size: 22px;
     font-weight: 900;
     padding-right: 15px;
-    /* z-index: 100; */
 }
 
 header .container nav ul {
@@ -217,6 +216,10 @@ header .container nav ul a:hover::before{
         top: 100%;
         left: 0;
         background-color: var(--over-color);
+    }
+
+    header .container nav:hover ul {
+        display: flex;
     }
 
     header .container nav:hover ul li {
@@ -555,6 +558,7 @@ header .container nav ul a:hover::before{
 
 .video video{
     width: 100%;
+    padding-bottom: 100px;
 }
 
 .video .text-video {
@@ -600,9 +604,7 @@ header .container nav ul a:hover::before{
 /* End Video */
 /* Start About */
 .about {
-    margin-top: 100px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 100px 15px 0;
 }
 
 .about .image-about {
@@ -925,7 +927,7 @@ header .container nav ul a:hover::before{
 /* End Quote */
 /* Start Price */
 .price {
-    margin-top: 100px;
+    padding-top: 100px;
     text-align: center;
 }
 
@@ -1084,7 +1086,7 @@ header .container nav ul a:hover::before{
 /* End Subscribe */
 /* Start Contact */
 .contact {
-    margin: 100px 0;
+    padding: 100px 0;
 }
 
 .contact .content {
